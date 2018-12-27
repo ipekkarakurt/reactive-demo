@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,11 +12,11 @@ import java.util.Date;
 @Document(collection = "events")
 public class Event {
     @Id
-    private long id;
-    private Date date;
+    private String id;
+    private String description;
 
-    public Event(long id, Date date) {
+    public Event(String id, String description) {
         this.id = id;
-        this.date = date;
+        this.description = description;
     }
 }
